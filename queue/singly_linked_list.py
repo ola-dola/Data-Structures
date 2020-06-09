@@ -64,7 +64,6 @@ class LinkedList:
         self.head = self.head.get_next()
         # return the stored value
         return value
-
     def contains(self, value):
         # if there is no head we have an empty list
         if not self.head:
