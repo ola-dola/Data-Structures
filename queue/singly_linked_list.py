@@ -36,7 +36,7 @@ class LinkedList:
         # otherwise (we have a non empty list)
         else:
             # set the current tails next ref to our new node
-            self.tail.next = new_node
+            self.tail.next_node = new_node
             # set lists tail ref to our new node
             self.tail = new_node
 
@@ -64,7 +64,6 @@ class LinkedList:
         self.head = self.head.get_next()
         # return the stored value
         return value
-
     def contains(self, value):
         # if there is no head we have an empty list
         if not self.head:
