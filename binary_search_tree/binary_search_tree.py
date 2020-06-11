@@ -54,17 +54,23 @@ class BSTNode:
             return highest
         else:
             return self.right.get_max()
-            
-
 
     # Call the function `fn` on the value of each node
+
     def for_each(self, fn):
-        pass
+        fn(self.value)
+
+        if self.right:
+            self.right.for_each(fn)
+        if self.left:
+            self.left.for_each(fn)
+
 
     # Part 2 -----------------------
 
     # Print all the values in order from low to high
     # Hint:  Use a recursive, depth first traversal
+
     def in_order_print(self, node):
         pass
 
